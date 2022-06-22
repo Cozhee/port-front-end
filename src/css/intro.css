@@ -1,0 +1,8 @@
+.intro-link {
+    color: black;
+    margin-left: 15px;
+}
+
+.intro-link:hover {
+    color: #5f2991;
+}
