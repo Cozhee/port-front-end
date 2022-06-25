@@ -4,5 +4,17 @@
 }
 
 .intro-link:hover {
-    color: #5f2991;
+    color: #f79514;
+}
+
+.intro-title, .intro-name {
+    color: white;
+}
+
+.nav-link:hover {
+    color: #5f2991 !important;
+}
+
+.navbar {
+    box-shadow: none !important;
 }
