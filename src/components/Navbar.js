@@ -1,18 +1,29 @@
-function NavBar() {
+import * as React from 'react'
+import Appbar from '@mui/material/AppBar'
+import Box from '@mui/material/Box'
+import Toolbar from '@mui/material/Toolbar'
+import Typography from "@mui/material/Typography";
+import Button from '@mui/material/Button'
 
-    const name = '{ Cody }'
+function Navbar() {
+
+    const name = '{ Cody Davis }'
 
     return (
-        <div className="px-16 navbar justify-center flex items-center h-24">
-            <h1 className="w-full text-4xl font-medium tracking-widest text-[#F35B04]"> {name} </h1>
-            <ul className="flex whitespace-nowrap">
-                <li className="p-4"><a href="#">Sign in</a></li>
-                <li className="p-4"><a href="#">Sign out</a></li>
-                <li className="p-4"><a href="#">Profile</a></li>
-                <li className="p-4"><a href="#">Contact</a></li>
-            </ul>
-        </div>
+        <Box sx={{ flexGrow: 1, marginBottom: '100px' }}>
+            <Appbar sx={{ backgroundColor: 'white' }}>
+                <Toolbar>
+                    <Typography variant="h4" component="div"  sx={{ flexGrow: 1, color: '#19323C', fontWeight: 400, letterSpacing: '.1rem' }}>
+                        { name }
+                    </Typography>
+                    <Button sx={{ color: 'black' }}>Login</Button>
+                    <Button sx={{ color: 'black' }}>Logout</Button>
+                    <Button sx={{ color: 'black' }}>Profile</Button>
+                    <Button sx={{ color: 'black' }}>Contact</Button>
+                </Toolbar>
+            </Appbar>
+        </Box>
     )
 }
 
-export default NavBar
+export default Navbar
