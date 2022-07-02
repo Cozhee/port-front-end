@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+    margin: 0;
+}
+
 .React-skill {
     color: #61dafb !important;
     background-color: #222222 !important;
@@ -142,4 +146,3 @@
     content: url("./images/js.webp");
     border-radius: 0 !important;
 }
-

@@ -9,12 +9,12 @@ function Intro() {
 
 
     return (
-        <Grid container spacing={2} sx={{ justifyContent: 'center' }}>
-            <Grid item xs={12} sm={4}>
-                <Box sx={{ display: { sm: 'none', md: 'block'}} }>
-                    <img alt="me" src={img} />
-                </Box>
-            </Grid>
+        <Grid container spacing={2} sx={{ justifyContent: 'center', marginBottom: 10 }}>
+            {/*<Grid item xs={12} sm={4}>*/}
+            {/*    <Box sx={{ display: { sm: 'none', md: 'block'}} }>*/}
+            {/*        <img alt="me" src={img} />*/}
+            {/*    </Box>*/}
+            {/*</Grid>*/}
             <Grid item xs={12} sm={5} sx={{ my: 'auto', marginLeft: 5 }}>
                 <Typography variant="h4">
                     I am Cody, a <Box component="span" sx={{ color: '#F2545B'}}>software developer</Box> <br/> Passionate about coding and learning <br/>
