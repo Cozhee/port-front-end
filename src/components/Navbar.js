@@ -4,8 +4,16 @@ import Box from '@mui/material/Box'
 import Toolbar from '@mui/material/Toolbar'
 import Typography from "@mui/material/Typography";
 import Button from '@mui/material/Button'
+import {styled} from "@mui/material/styles";
 
 function Navbar() {
+
+    const NavButton = styled(Button)({
+        '&:hover': {
+            backgroundColor: '#F2545B',
+            color: 'white'
+        },
+    });
 
     const name = '{ Cody Davis }'
 
@@ -16,10 +24,10 @@ function Navbar() {
                     <Typography variant="h4" component="div"  sx={{ flexGrow: 1, color: '#19323C', fontWeight: 400, letterSpacing: '.1rem' }}>
                         { name }
                     </Typography>
-                    <Button sx={{ color: 'black' }}>Login</Button>
-                    <Button sx={{ color: 'black' }}>Logout</Button>
-                    <Button sx={{ color: 'black' }}>Profile</Button>
-                    <Button sx={{ color: 'black' }}>Contact</Button>
+                    <NavButton sx={{ color: 'black' }}>Login</NavButton>
+                    <NavButton sx={{ color: 'black' }}>Logout</NavButton>
+                    <NavButton sx={{ color: 'black' }}>Profile</NavButton>
+                    <NavButton sx={{ color: 'black' }}>Contact</NavButton>
                 </Toolbar>
             </Appbar>
         </Box>

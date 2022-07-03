@@ -74,6 +74,7 @@ body {
 .Postgres-skill .MuiAvatar-root {
     background-color: white !important;
     content: url("./images/postgresql.svg");
+    border-radius: 0 !important;
 }
 
 .Heroku-skill {
@@ -114,6 +115,7 @@ body {
 .Auth0-skill .MuiAvatar-root {
     background-color: #df5022 !important;
     content: url("./images/auth0.svg");
+    border-radius: 0 !important;
 }
 
 .Mongo-skill {

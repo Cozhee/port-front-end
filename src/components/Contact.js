@@ -35,8 +35,11 @@ function Contact() {
                 flexDirection: 'column'
             }}
             >
-                <Typography variant="h5">
+                <Typography variant="h5" mb={1}>
                     {formTitle}
+                </Typography>
+                <Typography variant="p">
+                    I look forward to hearing from you. Fill out the form below and I will respond back to you immediately.
                 </Typography>
                 <Box component="form">
                     <CssTextField

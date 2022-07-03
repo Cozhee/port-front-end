@@ -5,13 +5,16 @@ import Contact from './components/Contact'
 import Footer from './components/Footer'
 
 function App() {
-  return (
+
+    const skills = ['JavaScript', 'React', 'MaterialUI', 'Express', 'Node', 'Sequelize', 'Git', 'Auth0', 'Github', 'Postgres', 'Mongo', 'Heroku', 'Vue', 'Jest']
+
+    return (
     <div className="App">
         <Navbar />
-        <Intro />
+        <Intro skills={skills}/>
         <Project />
+        <Intro skills={skills}/>
         <Contact />
-
         <Footer />
     </div>
   );

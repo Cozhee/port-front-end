@@ -11,12 +11,21 @@ import {RiLiveFill} from 'react-icons/ri'
 import {BsGithub} from 'react-icons/bs'
 import Link from '@mui/material/Link'
 import {CardActions} from "@mui/material";
-import Divider from '@mui/material/Divider'
+import {styled} from "@mui/material/styles";
+
 
 function Project() {
 
-    const skill = 'React'
     const projects = '{...Projects}'
+
+    const ProjectCard = styled(Card)({
+        display: 'flex',
+        height: '100%',
+        '&:hover': {
+            transform: 'scale(1.01)',
+            boxShadow: '0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22)'
+        },
+    });
 
     return (
         <>
@@ -25,14 +34,14 @@ function Project() {
                     {projects}
                 </Typography>
                 <Typography variant="subtitle2">
-                    On display is projects I have completed either as a personal project or for a client. With each project you have the opportunity to check out the live website or directly browse the source code.
+                    On display are the projects I have completed either as a personal project or for a client. With each project you have the opportunity to check out the live website or directly browse the source code.
                 </Typography>
             </Box>
 
-            <Container sx={{ display: 'flex', justifyContent: 'center', marginBottom: 20 }}>
+            <Container sx={{ display: 'flex', justifyContent: 'center', marginBottom: 10 }}>
                 <Grid container spacing={3}>
                     <Grid item xs={12} md={6}>
-                        <Card sx={{ display: 'flex', height: '100%' }}>
+                        <ProjectCard sx={{ display: 'flex', height: '100%' }}>
                             <Box sx={{ display: 'flex', flexDirection: 'column' }}>
                                 <CardContent sx={{ flex: '1 0 auto'}}>
                                     <Typography variant="h6">
@@ -57,10 +66,10 @@ function Project() {
                                 image={img}
                                 alt="Live from space album cover"
                             />
-                        </Card>
+                        </ProjectCard>
                     </Grid>
                     <Grid item xs={12} md={6}>
-                        <Card sx={{ display: 'flex', height: '100%' }}>
+                        <ProjectCard sx={{ display: 'flex', height: '100%' }}>
                             <Box sx={{ display: 'flex', flexDirection: 'column' }}>
                                 <CardContent sx={{ flex: '1 0 auto'}}>
                                     <Typography variant="h6">
@@ -85,10 +94,10 @@ function Project() {
                                 image={img2}
                                 alt="Live from space album cover"
                             />
-                        </Card>
+                        </ProjectCard>
                     </Grid>
                     <Grid item xs={12} md={6}>
-                        <Card sx={{ display: 'flex', height: '100%' }}>
+                        <ProjectCard sx={{ display: 'flex', height: '100%' }}>
                             <Box sx={{ display: 'flex', flexDirection: 'column' }}>
                                 <CardContent sx={{ flex: '1 0 auto'}}>
                                     <Typography variant="h6">
@@ -113,7 +122,7 @@ function Project() {
                                 image={img}
                                 alt="Live from space album cover"
                             />
-                        </Card>
+                        </ProjectCard>
                     </Grid>
                 </Grid>
             </Container>
