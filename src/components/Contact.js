@@ -35,7 +35,7 @@ function Contact() {
                 flexDirection: 'column'
             }}
             >
-                <Typography variant="h4">
+                <Typography variant="h5">
                     {formTitle}
                 </Typography>
                 <Box component="form">

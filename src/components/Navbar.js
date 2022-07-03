@@ -10,7 +10,7 @@ function Navbar() {
     const name = '{ Cody Davis }'
 
     return (
-        <Box sx={{ flexGrow: 1, marginBottom: '100px' }}>
+        <Box sx={{ flexGrow: 1, marginBottom: '80px' }}>
             <Appbar sx={{ backgroundColor: 'white' }}>
                 <Toolbar>
                     <Typography variant="h4" component="div"  sx={{ flexGrow: 1, color: '#19323C', fontWeight: 400, letterSpacing: '.1rem' }}>
