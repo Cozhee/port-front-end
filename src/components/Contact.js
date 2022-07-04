@@ -38,7 +38,7 @@ function Contact() {
                 <Typography variant="h5" mb={1}>
                     {formTitle}
                 </Typography>
-                <Typography variant="p">
+                <Typography variant="subtitle2">
                     I look forward to hearing from you. Fill out the form below and I will respond back to you immediately.
                 </Typography>
                 <Box component="form">

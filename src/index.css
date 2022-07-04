@@ -12,7 +12,7 @@ body {
 }
 
 .React-skill .MuiAvatar-root {
-    content: url("./images/favicon.ico");
+    content: url("../public/images/favicon.ico");
     background-color: #222222;
 }
 
@@ -23,7 +23,7 @@ body {
 
 .Express-skill .MuiAvatar-root {
     background-color: white !important;
-    content: url("./images/express.jpg");;
+    content: url("../public/images/express.jpg");;
 }
 
 .Sequelize-skill {
@@ -33,7 +33,7 @@ body {
 
 .Sequelize-skill .MuiAvatar-root {
     background-color: white !important;
-    content: url("./images/sequelize.svg");
+    content: url("../public/images/sequelize.svg");
 }
 
 .Node-skill {
@@ -43,7 +43,7 @@ body {
 
 .Node-skill .MuiAvatar-root {
     background-color: black !important;
-    content: url("./images/node.png");
+    content: url("../public/images/node.png");
 }
 
 .Git-skill {
@@ -53,7 +53,7 @@ body {
 
 .Git-skill .MuiAvatar-root {
     background-color: #efefe7 !important;
-    content: url("./images/git.png");
+    content: url("../public/images/git.png");
 }
 
 .Github-skill {
@@ -63,7 +63,7 @@ body {
 
 .Github-skill .MuiAvatar-root {
     background-color: white !important;
-    content: url("./images/github.svg");
+    content: url("../public/images/github.svg");
 }
 
 .Postgres-skill {
@@ -73,7 +73,7 @@ body {
 
 .Postgres-skill .MuiAvatar-root {
     background-color: white !important;
-    content: url("./images/postgresql.svg");
+    content: url("../public/images/postgresql.svg");
     border-radius: 0 !important;
 }
 
@@ -84,7 +84,7 @@ body {
 
 .Heroku-skill .MuiAvatar-root {
     background-color: #6762a6 !important;
-    content: url("./images/heroku.svg");
+    content: url("../public/images/heroku.svg");
 }
 
 .Vue-skill {
@@ -94,7 +94,7 @@ body {
 
 .Vue-skill .MuiAvatar-root {
     background-color: #213547 !important;
-    content: url("./images/vue.png");
+    content: url("../public/images/vue.png");
 }
 
 .Jest-skill {
@@ -104,7 +104,7 @@ body {
 
 .Jest-skill .MuiAvatar-root {
     background-color: white !important;
-    content: url("./images/jest.png");
+    content: url("../public/images/jest.png");
 }
 
 .Auth0-skill {
@@ -114,7 +114,7 @@ body {
 
 .Auth0-skill .MuiAvatar-root {
     background-color: #df5022 !important;
-    content: url("./images/auth0.svg");
+    content: url("../public/images/auth0.svg");
     border-radius: 0 !important;
 }
 
@@ -125,7 +125,7 @@ body {
 
 .Mongo-skill .MuiAvatar-root {
     background-color: #001e2b !important;
-    content: url("./images/mongodb.svg");
+    content: url("../public/images/mongodb.svg");
 }
 
 .MaterialUI-skill {
@@ -135,7 +135,7 @@ body {
 
 .MaterialUI-skill .MuiAvatar-root {
     background-color: white !important;
-    content: url("./images/MaterialUI.png");
+    content: url("../public/images/MaterialUI.png");
 }
 
 .JavaScript-skill {
@@ -145,6 +145,6 @@ body {
 
 .JavaScript-skill .MuiAvatar-root {
     background-color: #fcdc00 !important;
-    content: url("./images/js.webp");
+    content: url("../public/images/js.webp");
     border-radius: 0 !important;
 }
