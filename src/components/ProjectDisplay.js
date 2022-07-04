@@ -22,7 +22,7 @@ function ProjectDisplay({project}) {
 
     return (
         <>
-                <Grid container sx={{ alignItems: 'center', backgroundColor: '#19323C' }} p={5}>
+                <Grid container sx={{ alignItems: 'center', backgroundColor: '#19323C' }} p={2}>
                     <Grid item xs={12} md={6}>
                         <Typography variant="h4" sx={{ color: '#F2545B'}}>
                             Tech Perspective
@@ -59,7 +59,7 @@ function ProjectDisplay({project}) {
                         </Box>
                     </Grid>
                 </Grid>
-                <Grid container sx={{ alignItems: 'center' }} mt={5}>
+                <Grid container sx={{ alignItems: 'center' }} mt={5} p={2}>
                     <Grid item xs={12} md={6}>
                         <Box
                             component="img"
@@ -80,7 +80,7 @@ function ProjectDisplay({project}) {
                         </Typography>
                     </Grid>
                 </Grid>
-                <Grid container sx={{ justifyContent: 'center' }} mt={5} >
+                <Grid container sx={{ justifyContent: 'center' }} mt={5} p={2}>
                     <Grid item xs={12} md={8}>
                         <Typography variant="h5" sx={{ color: '#19323C'}}>
                             Lessons Learned

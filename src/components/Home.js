@@ -10,10 +10,10 @@ function Home({skills, projects}) {
     return (
         <>
 
-        <Grid container spacing={2} sx={{ justifyContent: 'center', marginBottom: 10, paddingBottom: 20, height: '100vh', backgroundColor: '#F3F7F0' }}>
-            <Grid item xs={12} md={6} sx={{ my: 'auto', marginLeft: 5 }}>
+        <Grid container p={5} sx={{ justifyContent: 'center', marginBottom: 10, height: '100vh', backgroundColor: '#F3F7F0', paddingBottom: 20 }}>
+            <Grid item xs={12} md={6} sx={{ margin: 'auto'}}>
                 <Typography variant="h4" sx={{ color: 'black' }}>
-                    I am Cody, a <Box component="span" sx={{ color: '#F2545B'}}>software developer</Box> <br/> Passionate about coding and learning <br/>
+                    I am a <Box component="span" sx={{ color: '#F2545B'}}>software developer</Box> <br/> Passionate about coding and learning <br/>
                     <Skill skills={skills}/>
                 </Typography>
             </Grid>
