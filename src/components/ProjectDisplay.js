@@ -5,7 +5,6 @@ import Paper from '@mui/material/Paper';
 import Stack from '@mui/material/Stack';
 import { styled } from '@mui/material/styles';
 import Button from '@mui/material/Button'
-import { Link } from "react-router-dom";
 
 
 function ProjectDisplay({project}) {
