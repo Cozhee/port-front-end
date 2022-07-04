@@ -5,13 +5,10 @@ import Toolbar from '@mui/material/Toolbar'
 import Typography from "@mui/material/Typography";
 import Button from '@mui/material/Button'
 import {styled} from "@mui/material/styles";
-import { useState } from 'react'
 
 function Navbar() {
 
-    const [user, setUser] = useState(false)
-
-    setUser(false)
+    const user = false
 
     const NavButton = styled(Button)({
         '&:hover': {
