@@ -9,8 +9,8 @@ import Button from '@mui/material/Button'
 
 function ProjectDisplay({project}) {
 
-    // const projectName = window.location.pathname.slice(1).split('%20').join(' ')
-    const projectName = 'Tech Perspective'
+    const projectName = window.location.pathname.slice(1).split('%20').join(' ')
+    // const projectName = 'Tech Perspective'
     const displayedProject = project.filter(content => content.title === projectName)
     console.log(displayedProject)
 
