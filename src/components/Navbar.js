@@ -11,6 +11,8 @@ function Navbar() {
 
     const [user, setUser] = useState(false)
 
+    setUser(false)
+
     const NavButton = styled(Button)({
         '&:hover': {
             backgroundColor: '#F2545B',
