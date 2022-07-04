@@ -49,7 +49,7 @@ function App() {
         <Navbar />
         <Routes>
             <Route path="/" element={<Home skills={skills} projects={projects} />}/>
-            <Route path="/:projectname" element={<ProjectDisplay project={projects}/>} />
+            <Route path="/project" element={<ProjectDisplay project={projects}/>} />
         </Routes>
         <Footer />
     </div>
