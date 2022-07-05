@@ -42,7 +42,7 @@ function Project({projects}) {
                     {projects.map(project => {
 
                         return (
-                            <Grid item xs={12} md={6}>
+                            <Grid key={project.title} item xs={12} md={6}>
                                 <ProjectCard sx={{ display: 'flex', height: '100%', justifyContent: 'space-between' }}>
                                     <Box sx={{ display: 'flex', flexDirection: 'column' }}>
                                         <CardContent sx={{ flex: '1 0 auto'}}>

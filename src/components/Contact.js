@@ -13,32 +13,47 @@ function Contact() {
 
     const [open, setOpen] = useState(false)
 
+    const [firstName, setFirstName] = useState('')
+    const [lastName, setLastName] = useState('')
+    const [email, setEmail] = useState('')
+    const [message, setMessage] = useState('')
+
+    const [formErrors, setFormErrors] = useState(false)
+
+    const [firstNameError, setFirstNameError] = useState(false)
+    const [lastNameError, setLastNameError] = useState(false)
+    const [emailError, setEmailError] = useState(false)
+    const [messageError, setMessageError] = useState(false)
+
     const form = useRef()
     const sendEmail = (e) => {
+
         e.preventDefault();
 
-        setOpen(true)
-        emailjs.sendForm(`${process.env.REACT_APP_SERVICE_ID}`, `${process.env.REACT_APP_TEMPLATE_ID}`, form.current, `${process.env.REACT_APP_PUBLIC_KEY}`)
-            .then((result) => {
-                console.log(result.text);
-            }, (error) => {
-                console.log(error.text);
-            });
+        if (firstName && lastName && email && message) {
+            setOpen(true)
+            emailjs.sendForm(`${process.env.REACT_APP_SERVICE_ID}`, `${process.env.REACT_APP_TEMPLATE_ID}`, form.current, `${process.env.REACT_APP_PUBLIC_KEY}`)
+                .then((result) => {
+                    console.log(result.text);
+                }, (error) => {
+                    console.log(error.text);
+                });
+        } else {
+            setFormErrors(true)
+            if(!firstName) setFirstNameError(true)
+            if(!lastName) setLastNameError(true)
+            if(!email) setEmailError(true)
+            if(!message) setMessageError(true)
+        }
     };
 
     const handleEmailAlertClose = () => {
         setOpen(false)
     }
 
-    const CssTextField = styled(TextField)({
-        '& label.Mui-focused': {
-            color: '#19323C',
-        },
-        '& .MuiInput-underline:after': {
-            borderBottomColor: '#A93F55',
-        }
-    });
-
+    const handleFormErrorAlert = () => {
+        setFormErrors(false)
+    }
 
     const FormButton = styled(Button)({
         backgroundColor: '#19323C',
@@ -66,7 +81,8 @@ function Contact() {
                     I look forward to hearing from you. Fill out the form below and I will respond back to you immediately.
                 </Typography>
                 <Box component="form" ref={form}>
-                    <CssTextField
+                    <TextField
+                        error={firstNameError}
                         margin="normal"
                         fullWidth
                         id="first-name"
@@ -74,8 +90,11 @@ function Contact() {
                         variant="outlined"
                         color="warning"
                         name="first-name"
+                        value={firstName}
+                        onChange={(e) => setFirstName(e.target.value)}
                     />
-                    <CssTextField
+                    <TextField
+                        error={lastNameError}
                         margin="normal"
                         fullWidth
                         id="last-name"
@@ -83,8 +102,11 @@ function Contact() {
                         variant="outlined"
                         color="warning"
                         name="last-name"
+                        value={lastName}
+                        onChange={(e) => setLastName(e.target.value)}
                     />
-                    <CssTextField
+                    <TextField
+                        error={emailError}
                         margin="normal"
                         fullWidth
                         id="email"
@@ -92,16 +114,21 @@ function Contact() {
                         variant="outlined"
                         color="warning"
                         name="email"
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
                     />
-                    <CssTextField
+                    <TextField
+                        error={messageError}
                         margin="normal"
-                        id="outlined-multiline-static"
+                        id="message"
                         fullWidth
                         label="Message"
                         multiline
                         rows={4}
                         color="warning"
                         name="message"
+                        value={message}
+                        onChange={(e) => setMessage(e.target.value)}
                     />
                     <FormButton
                         margin="normal"
@@ -114,12 +141,18 @@ function Contact() {
                 </Box>
             </Box>
 
-
             <Snackbar
                 open={open}
                 autoHideDuration={3000}
                 message="Email sent"
                 onClose={handleEmailAlertClose}
+            />
+
+            <Snackbar
+                open={formErrors}
+                autoHideDuration={4000}
+                message="Please fill out all available fields"
+                onClose={handleFormErrorAlert}
             />
 
         </Container>

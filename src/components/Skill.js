@@ -9,7 +9,7 @@ export default function Skill({skills}) {
         <Stack sx={{ display: 'inline'}} direction="row">
             {skills.map(skill => {
                 return (
-                    <Chip avatar={<Avatar />} sx={{ marginRight: 1, borderRadius: 2, fontWeight: 500, boxShadow: 'rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;' }} className={skill + '-skill'} label={skill} />
+                    <Chip key={skill} avatar={<Avatar />} sx={{ marginRight: 1, borderRadius: 2, fontWeight: 500, boxShadow: 'rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;' }} className={skill + '-skill'} label={skill} />
                     )
             })}
         </Stack>
