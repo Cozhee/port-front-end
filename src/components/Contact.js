@@ -4,8 +4,31 @@ import Typography from '@mui/material/Typography'
 import TextField from '@mui/material/TextField'
 import Button from '@mui/material/Button'
 import { styled } from '@mui/material/styles'
+import React, { useRef } from 'react';
+import emailjs from '@emailjs/browser';
+import Snackbar from '@mui/material/Snackbar'
+import { useState } from 'react'
 
 function Contact() {
+
+    const [open, setOpen] = useState(false)
+
+    const form = useRef()
+    const sendEmail = (e) => {
+        e.preventDefault();
+
+        setOpen(true)
+        emailjs.sendForm(`${process.env.REACT_APP_SERVICE_ID}`, `${process.env.REACT_APP_TEMPLATE_ID}`, form.current, `${process.env.REACT_APP_PUBLIC_KEY}`)
+            .then((result) => {
+                console.log(result.text);
+            }, (error) => {
+                console.log(error.text);
+            });
+    };
+
+    const handleEmailAlertClose = () => {
+        setOpen(false)
+    }
 
     const CssTextField = styled(TextField)({
         '& label.Mui-focused': {
@@ -28,6 +51,7 @@ function Contact() {
     const formTitle = '{ Contact }'
 
     return (
+
         <Container component="main" maxWidth="sm">
             <Box sx={{
                 display: 'flex',
@@ -41,7 +65,7 @@ function Contact() {
                 <Typography variant="subtitle2">
                     I look forward to hearing from you. Fill out the form below and I will respond back to you immediately.
                 </Typography>
-                <Box component="form">
+                <Box component="form" ref={form}>
                     <CssTextField
                         margin="normal"
                         fullWidth
@@ -49,6 +73,7 @@ function Contact() {
                         label="First name"
                         variant="outlined"
                         color="warning"
+                        name="first-name"
                     />
                     <CssTextField
                         margin="normal"
@@ -57,6 +82,7 @@ function Contact() {
                         label="Last name"
                         variant="outlined"
                         color="warning"
+                        name="last-name"
                     />
                     <CssTextField
                         margin="normal"
@@ -65,6 +91,7 @@ function Contact() {
                         label="Email"
                         variant="outlined"
                         color="warning"
+                        name="email"
                     />
                     <CssTextField
                         margin="normal"
@@ -74,16 +101,27 @@ function Contact() {
                         multiline
                         rows={4}
                         color="warning"
+                        name="message"
                     />
                     <FormButton
                         margin="normal"
                         type="submit"
                         fullWidth
+                        onClick={sendEmail}
                     >
                         Submit
                     </FormButton>
                 </Box>
             </Box>
+
+
+            <Snackbar
+                open={open}
+                autoHideDuration={3000}
+                message="Email sent"
+                onClose={handleEmailAlertClose}
+            />
+
         </Container>
     )
 }

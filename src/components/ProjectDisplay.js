@@ -10,9 +10,7 @@ import Button from '@mui/material/Button'
 function ProjectDisplay({project}) {
 
     const projectName = window.location.pathname.slice(1).split('%20').join(' ')
-    // const projectName = 'Tech Perspective'
     const displayedProject = project.filter(content => content.title === projectName)
-    console.log(displayedProject)
 
     const Item = styled(Paper)(({ theme }) => ({
         padding: theme.spacing(1),
@@ -47,7 +45,7 @@ function ProjectDisplay({project}) {
                             This project was created to track statistics about students entering the tech world and their inclusion and exposure to technology prior to engaging in formal education. After the collection of the results it was detrimental that an admin would be able to review the results in a graph format giving immediate feedback on specific questions.
                         </Typography>
                     </Grid>
-                    <Grid item xs={12} md={6}>
+                    <Grid item xs={12} md={6} mt={5}>
                         <Box
                             component="img"
                             src={displayedProject[0].img}
@@ -59,7 +57,7 @@ function ProjectDisplay({project}) {
                         </Box>
                     </Grid>
                 </Grid>
-                <Grid container sx={{ alignItems: 'center' }} mt={5} p={2}>
+                <Grid container sx={{ alignItems: 'center' }} p={2}>
                     <Grid item xs={12} md={6}>
                         <Box
                             component="img"
@@ -71,7 +69,7 @@ function ProjectDisplay({project}) {
 
                         </Box>
                     </Grid>
-                    <Grid item xs={12} md={6}>
+                    <Grid item xs={12} md={6} mt={5}>
                         <Typography variant="h5" sx={{ color: '#19323C'}}>
                             Problems and Process
                         </Typography>

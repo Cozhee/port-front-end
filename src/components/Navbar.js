@@ -23,7 +23,7 @@ function Navbar() {
         <Box sx={{ flexGrow: 1, marginBottom: '63px' }}>
             <Appbar sx={{ backgroundColor: 'white' }}>
                 <Toolbar>
-                    <Typography variant="h4" component="div"  sx={{ flexGrow: 1, color: '#19323C', fontWeight: 400, letterSpacing: '.1rem' }}>
+                    <Typography variant="h4" component="div"  sx={{ flexGrow: 1, color: '#19323C', fontWeight: 400, letterSpacing: '.05rem' }}>
                         { name }
                     </Typography>
                     {user &&
