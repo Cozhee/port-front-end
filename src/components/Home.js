@@ -4,6 +4,7 @@ import Grid from '@mui/material/Grid'
 import Skill from '../components/Skill'
 import Project from '../components/Project'
 import Contact from '../components/Contact'
+import About from '../components/About'
 
 function Home({skills, projects}) {
 
@@ -20,6 +21,7 @@ function Home({skills, projects}) {
         </Grid>
 
         <Project projects={projects}/>
+        <About/>
         <Contact/>
         </>
     )

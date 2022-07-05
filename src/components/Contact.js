@@ -74,7 +74,7 @@ function Contact() {
                 flexDirection: 'column'
             }}
             >
-                <Typography variant="h5" mb={1}>
+                <Typography variant="h5" mb={1} mt={5}>
                     {formTitle}
                 </Typography>
                 <Typography variant="subtitle2">
