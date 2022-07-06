@@ -24,10 +24,10 @@ export default function Footer() {
                 }}
             >
                 <Container maxWidth="sm" sx={{ display: 'flex', justifyContent: 'center'}}>
-                        <Link href="#" m={2}>
+                        <Link href="https://www.linkedin.com/in/davis-r-cody/" m={2}>
                             <BsLinkedin size={25} style={{ color: '#0b65c2' }}/>
                         </Link>
-                        <Link href="#" m={2}>
+                        <Link href="https://github.com/Cozhee" m={2}>
                             <BsGithub size={25} style={{ color: '#24292e' }}/>
                         </Link>
                 </Container>
