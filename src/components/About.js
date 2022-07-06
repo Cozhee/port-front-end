@@ -21,7 +21,7 @@ function About() {
 
     return (
         <Container maxWidth sx={{ display: 'flex', backgroundColor: '#19323C', minHeight: '50vh', justifyContent: 'center', alignItems: 'center' }}>
-            <Container sx={{ color: 'white' }}>
+            <Container sx={{ color: 'white', padding: 5 }}>
                 <Typography variant="h5" sx={{ textAlign: 'center' }}>
                     {about}
                 </Typography>

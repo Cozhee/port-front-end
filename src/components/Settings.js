@@ -145,8 +145,8 @@ function Settings() {
                 </Typography>
 
                 <Grid container spacing={2}>
-                    <Grid item xs={3}>
-                        <Card>
+                    <Grid item xs={12} sm={6} md={3}>
+                        <Card sx={{ maxWidth: 275 }}>
                             <CardContent>
                                 <Typography variant="h6" gutterBottom>
                                     Tech Perspective
@@ -163,7 +163,7 @@ function Settings() {
                             <ProjectModalDisplay project={fakeProject}/>
                         </Modal>
                     </Grid>
-                    <Grid item xs={3}>
+                    <Grid item xs={12} sm={6} md={3}>
                         <Card sx={{ maxWidth: 275 }}>
                             <CardContent>
                                 <Typography variant="h6" gutterBottom>
@@ -308,9 +308,7 @@ function ProjectModalDisplay({ project }) {
             rows={4}
             onChange={(e) => setIntro(e.target.value)}
         />
-
         <Button>Save</Button>
-
     </Box>
     )
 }
