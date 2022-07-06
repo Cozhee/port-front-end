@@ -27,7 +27,7 @@ function Project({projects}) {
 
     return (
         <>
-            <Box maxWidth="sm" p={3} sx={{ mx: 'auto', marginBottom: 8 }} spacing={2}>
+            <Box maxWidth="sm" p={3} sx={{ mx: 'auto', marginBottom: 5 }} spacing={2}>
                 <Typography variant="h5" sx={{ color: '#19323C', marginBottom: 1, textAlign: 'center' }}>
                     {project}
                 </Typography>

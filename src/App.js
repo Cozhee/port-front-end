@@ -3,6 +3,7 @@ import Home from './components/Home.js'
 import ProjectDisplay from './components/ProjectDisplay'
 import Footer from './components/Footer'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import Settings from './components/Settings'
 
 function App() {
 
@@ -51,6 +52,7 @@ function App() {
             <Routes>
                 <Route path="/" element={<Home skills={skills} projects={projects} />}/>
                 <Route path="/:project" element={<ProjectDisplay project={projects}/>} />
+                <Route path="/settings" element={<Settings/> }/>
             </Routes>
             <Footer />
         </BrowserRouter>
