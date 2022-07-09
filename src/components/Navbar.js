@@ -4,7 +4,7 @@ import Box from '@mui/material/Box'
 import Toolbar from '@mui/material/Toolbar'
 import Typography from "@mui/material/Typography";
 import Button from '@mui/material/Button'
-import {styled} from "@mui/material/styles";
+import {styled} from "@mui/material/styles"
 
 function Navbar() {
 
@@ -26,9 +26,9 @@ function Navbar() {
                     <Typography variant="h4" component="div"  sx={{ flexGrow: 1, color: '#19323C', fontWeight: 400, letterSpacing: '.05rem' }}>
                         { name }
                     </Typography>
-                    <NavButton href="#contact" sx={{ color: 'black' }}>Contact</NavButton>
-                    <NavButton href="#about" sx={{ color: 'black' }}>About</NavButton>
-                    <NavButton href="#projects" sx={{ color: 'black' }}>Projects</NavButton>
+                    <NavButton href="/#contact" sx={{ color: 'black' }}>Contact</NavButton>
+                    <NavButton href="/#about" sx={{ color: 'black' }}>About</NavButton>
+                    <NavButton href="/#projects" sx={{ color: 'black' }}>Projects</NavButton>
                     {user &&
                         <>
                             <NavButton href="/settings" sx={{ color: 'black' }}>Settings</NavButton>

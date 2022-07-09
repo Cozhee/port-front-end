@@ -27,7 +27,7 @@ function Project({projects}) {
 
     return (
         <>
-            <Box id="projects" maxWidth="sm" sx={{ mx: 'auto' }} spacing={2}>
+            <Box pt={5} id="projects" maxWidth="sm" sx={{ mx: 'auto' }} spacing={2}>
                 <Box sx={{ padding: 5}}>
                     <Typography variant="h4" sx={{ marginBottom: 1, textAlign: 'center' }}>
                         {project}
