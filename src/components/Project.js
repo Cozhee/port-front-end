@@ -56,7 +56,7 @@ function Project({projects}) {
                                             </Typography>
                                         </CardContent>
                                         <CardActions>
-                                            <a className="live-link" href={project.liveLink} target="_blank">
+                                            <a className="live-link" href={project.liveLink} target="_blank" rel="noreferrer">
                                                 <RiLiveFill style={{ color: '#F2545B' }} size={25}/>
                                             </a>
                                             <Link style={{ color: 'black' }} className="github-link" href={project.githubLink}>

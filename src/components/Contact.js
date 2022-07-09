@@ -64,10 +64,6 @@ function Contact() {
         },
     });
 
-    const ContactTextField = styled(TextField)({
-        color: 'purple'
-    })
-
     const formTitle = 'Contact'
 
     return (
