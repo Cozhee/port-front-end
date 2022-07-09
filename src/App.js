@@ -11,37 +11,14 @@ function App() {
 
     const projects = [
         {
-            "title": "React State",
-            "description": "Side effects which include my picture not going all the way over to the side",
-            "img" : "../images/testimage2.png",
-            "githubLink": "https://github.com/Cozhee",
-            "liveLink": "https://github.com/Cozhee",
-            "skills": ['React', 'Express', 'Netlify', 'Sequelize']
-        },
-        {
             "title": "Tech Perspective",
             "description": "Survey application used to record the inclusion results from students in the tech industry",
             "img" : "../images/testimage.png",
+            "img2": "../images/testimage3.png",
             "githubLink": "https://github.com/Cozhee",
-            "liveLink": "https://github.com/Cozhee",
-            "skills": ['React', 'Express', 'Netlify', 'Heroku']
+            "liveLink": "https://tech-perspective-301d85.netlify.app/",
+            "skills": ['React', 'MongoDB', 'Netlify', 'Heroku', 'Express', 'Bootstrap']
         },
-        {
-            "title": "This portfolio",
-            "description": "Dynamic portfolio application created to display unique information from each authenticated user",
-            "img" : "../images/testimage3.png",
-            "githubLink": "https://github.com/Cozhee",
-            "liveLink": "https://github.com/Cozhee",
-            "skills": ['React', 'Express', 'Sequelize', 'MaterialUI', 'React Router', 'Heroku', 'Netlify']
-        },
-        {
-            "title": "Invoice Tracker",
-            "description": "Records input and output data for businesses tracking work for clients",
-            "img" : "../images/tp3.png",
-            "githubLink": "https://github.com/Cozhee",
-            "liveLink": "https://github.com/Cozhee",
-            "skills": ['React', 'Express', 'Netlify', 'Heroku']
-        }
     ]
 
 
@@ -51,7 +28,7 @@ function App() {
             <Navbar />
             <Routes>
                 <Route path="/" element={<Home skills={skills} projects={projects} />}/>
-                <Route path="/:project" element={<ProjectDisplay project={projects}/>} />
+                <Route path="/:project" element={<ProjectDisplay projects={projects}/>} />
                 <Route path="/settings" element={<Settings/> }/>
             </Routes>
             <Footer />

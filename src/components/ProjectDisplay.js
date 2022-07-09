@@ -7,10 +7,10 @@ import { styled } from '@mui/material/styles';
 import Button from '@mui/material/Button'
 
 
-function ProjectDisplay({project}) {
+function ProjectDisplay({projects}) {
 
     const projectName = window.location.pathname.slice(1).split('%20').join(' ')
-    const displayedProject = project.filter(content => content.title === projectName)
+    const displayedProject = projects.filter(content => content.title === projectName)
 
     const Item = styled(Paper)(({ theme }) => ({
         padding: theme.spacing(1),
@@ -61,7 +61,7 @@ function ProjectDisplay({project}) {
                     <Grid item xs={12} md={6}>
                         <Box
                             component="img"
-                            src={displayedProject[0].img}
+                            src={displayedProject[0].img2}
                             sx={{
                                 width: '100%'
                             }}

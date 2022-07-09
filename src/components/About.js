@@ -8,21 +8,21 @@ function About() {
 
     const ResumeButton = styled(Button)({
         backgroundColor: 'white',
-        color: '#F2545B',
+        color: '#3dd3b6',
         marginTop: '20px',
         '&:hover': {
-            backgroundColor: '#F2545B',
+            backgroundColor: '#3dd3b6',
             color: 'white'
         }
 
     })
 
-    const about = '{ A Little About Myself }'
+    const about = 'A Little About Myself'
 
     return (
-        <Container maxWidth sx={{ display: 'flex', backgroundColor: '#19323C', minHeight: '50vh', justifyContent: 'center', alignItems: 'center' }}>
-            <Container sx={{ color: 'white', padding: 5 }}>
-                <Typography variant="h5" sx={{ textAlign: 'center' }}>
+        <Container id="about" maxWidth sx={{ display: 'flex', height: '60vh', justifyContent: 'center', alignItems: 'center', marginBottom: 10}}>
+            <Container sx={{ color: 'black', padding: 5 }}>
+                <Typography variant="h4" sx={{ textAlign: 'center' }}>
                     {about}
                 </Typography>
                 <Typography variant="body1" mt={2}>
@@ -32,7 +32,7 @@ function About() {
                     Now I am here. A software developer who still has motivation to learn and understand the deep fundamentals with programming and the many concepts. Being able to conceptually understand how code works is a skill I believe to be very important. Writing clean and organized code is always my end goal. If you enjoy my work please reach out and lets connect!
                 </Typography>
                 <Typography variant="body1" mt={2}>
-                    If you enjoyed getting to know me and would like to know more, please download my resume and take a look!
+                    If you enjoyed getting to know me and you're interest in the work I may provide, please download my resume and take a look!
                 </Typography>
                 <ResumeButton download="Resume" href="Resume.pdf">
                     Download Resume

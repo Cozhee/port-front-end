@@ -8,6 +8,7 @@ import React, { useRef } from 'react';
 import emailjs from '@emailjs/browser';
 import Snackbar from '@mui/material/Snackbar'
 import { useState } from 'react'
+import Grid from '@mui/material/Grid'
 
 function Contact() {
 
@@ -56,90 +57,110 @@ function Contact() {
     }
 
     const FormButton = styled(Button)({
-        backgroundColor: '#19323C',
+        backgroundColor: '#3dd3b6',
         color: 'white',
         '&:hover': {
-            backgroundColor: '#19323C',
+            backgroundColor: '#3dd3b6',
         },
     });
 
-    const formTitle = '{ Contact }'
+    const ContactTextField = styled(TextField)({
+        color: 'purple'
+    })
+
+    const formTitle = 'Contact'
 
     return (
 
-        <Container component="main" maxWidth="sm">
-            <Box sx={{
-                display: 'flex',
-                alignItems: 'center',
-                flexDirection: 'column'
-            }}
-            >
-                <Typography variant="h5" mb={1} mt={5}>
-                    {formTitle}
-                </Typography>
-                <Typography variant="subtitle2">
-                    I look forward to hearing from you. Fill out the form below and I will respond back to you immediately.
-                </Typography>
-                <Box component="form" ref={form}>
-                    <TextField
-                        error={firstNameError}
-                        margin="normal"
-                        fullWidth
-                        id="first-name"
-                        label="First name"
-                        variant="outlined"
-                        color="warning"
-                        name="first-name"
-                        value={firstName}
-                        onChange={(e) => setFirstName(e.target.value)}
-                    />
-                    <TextField
-                        error={lastNameError}
-                        margin="normal"
-                        fullWidth
-                        id="last-name"
-                        label="Last name"
-                        variant="outlined"
-                        color="warning"
-                        name="last-name"
-                        value={lastName}
-                        onChange={(e) => setLastName(e.target.value)}
-                    />
-                    <TextField
-                        error={emailError}
-                        margin="normal"
-                        fullWidth
-                        id="email"
-                        label="Email"
-                        variant="outlined"
-                        color="warning"
-                        name="email"
-                        value={email}
-                        onChange={(e) => setEmail(e.target.value)}
-                    />
-                    <TextField
-                        error={messageError}
-                        margin="normal"
-                        id="message"
-                        fullWidth
-                        label="Message"
-                        multiline
-                        rows={4}
-                        color="warning"
-                        name="message"
-                        value={message}
-                        onChange={(e) => setMessage(e.target.value)}
-                    />
-                    <FormButton
-                        margin="normal"
-                        type="submit"
-                        fullWidth
-                        onClick={sendEmail}
+        <Container component="main" id="contact" style={{ marginTop: 200}}>
+            <Grid container spacing={10} sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+                <Grid item xs={12} md={6}>
+                    <Box sx={{
+                        display: 'flex',
+                        alignItems: 'center',
+                        flexDirection: 'column'
+                    }}
                     >
-                        Submit
-                    </FormButton>
-                </Box>
-            </Box>
+                        <Typography variant="h4" mb={1} mt={5}>
+                            {formTitle}
+                        </Typography>
+                        <Typography variant="subtitle2">
+                            I look forward to hearing from you. Fill out the form below and I will respond back to you immediately.
+                        </Typography>
+                        <Box component="form" ref={form}>
+                            <TextField
+                                error={firstNameError}
+                                margin="normal"
+                                fullWidth
+                                id="first-name"
+                                label="First name"
+                                variant="outlined"
+                                color="secondary"
+                                name="first-name"
+                                value={firstName}
+                                onChange={(e) => setFirstName(e.target.value)}
+                            />
+                            <TextField
+                                error={lastNameError}
+                                margin="normal"
+                                fullWidth
+                                id="last-name"
+                                label="Last name"
+                                variant="outlined"
+                                color="secondary"
+                                name="last-name"
+                                value={lastName}
+                                onChange={(e) => setLastName(e.target.value)}
+                            />
+                            <TextField
+                                error={emailError}
+                                margin="normal"
+                                fullWidth
+                                id="email"
+                                label="Email"
+                                variant="outlined"
+                                color="secondary"
+                                name="email"
+                                value={email}
+                                onChange={(e) => setEmail(e.target.value)}
+                            />
+                            <TextField
+                                error={messageError}
+                                margin="normal"
+                                id="message"
+                                fullWidth
+                                label="Message"
+                                multiline
+                                rows={4}
+                                color="secondary"
+                                name="message"
+                                value={message}
+                                onChange={(e) => setMessage(e.target.value)}
+                            />
+                            <FormButton
+                                margin="normal"
+                                type="submit"
+                                fullWidth
+                                onClick={sendEmail}
+                            >
+                                Submit
+                            </FormButton>
+                        </Box>
+                    </Box>
+                </Grid>
+                <Grid item xs={12} md={6}>
+                    <Box
+                        component="img"
+                        src="/images/email.png"
+                        sx={{
+                            width: '100%'
+                        }}
+                    >
+
+                    </Box>
+                </Grid>
+            </Grid>
+
 
             <Snackbar
                 open={open}
@@ -154,7 +175,6 @@ function Contact() {
                 message="Please fill out all available fields"
                 onClose={handleFormErrorAlert}
             />
-
         </Container>
     )
 }

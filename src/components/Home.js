@@ -5,14 +5,37 @@ import Skill from '../components/Skill'
 import Project from '../components/Project'
 import Contact from '../components/Contact'
 import About from '../components/About'
+import {BsLinkedin, BsGithub} from 'react-icons/bs'
+import Button from '@mui/material/Button'
 
 function Home({skills, projects}) {
 
     return (
         <>
 
-        <Grid container p={5} sx={{ justifyContent: 'center', marginBottom: 10, height: '100vh', backgroundColor: '#F3F7F0', paddingBottom: 20 }}>
-            <Grid item xs={12} md={6} sx={{ margin: 'auto'}}>
+        <Grid container spacing={2} p={5} sx={{ justifyContent: 'center', alignItems: 'center', height: '100vh', paddingBottom: 10 }}>
+            <Grid item xs={12} md={10} lg={4}>
+                <Box
+                    component="img"
+                    src="/images/home-pic.png"
+                    sx={{
+                        width: '100%',
+                        borderRadius: '20px'
+                    }}
+                >
+                </Box>
+                <Box sx={{ display: 'flex', alignItems: 'center' }}>
+                    <BsGithub size={35} style={{ color: '#24292e', marginRight: 10 }}/>
+                    <BsLinkedin size={35} style={{ color: '#0b65c2', marginRight: 10 }}/>
+                    <Button href="#" style={{ backgroundColor: '#24292e', color: 'white' }}>
+                        Contact me
+                    </Button>
+                </Box>
+            </Grid>
+            <Grid item xs={12} md={10} lg={6}>
+                <Typography variant="h3" sx={{ color: 'black' }}>
+                    My name is Cody!
+                </Typography>
                 <Typography variant="h4" sx={{ color: 'black' }}>
                     I am a <Box component="span" sx={{ color: '#F2545B'}}>software developer</Box> <br/> Passionate about coding and learning <br/>
                     <Skill skills={skills}/>
@@ -20,8 +43,8 @@ function Home({skills, projects}) {
             </Grid>
         </Grid>
 
-        <Project projects={projects}/>
         <About/>
+        <Project projects={projects}/>
         <Contact/>
         </>
     )

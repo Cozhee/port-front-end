@@ -14,7 +14,7 @@ import Button from '@mui/material/Button'
 
 function Project({projects}) {
 
-    const project = '{...Projects}'
+    const project = 'Projects'
 
     const ProjectCard = styled(Card)({
         display: 'flex',
@@ -27,13 +27,15 @@ function Project({projects}) {
 
     return (
         <>
-            <Box maxWidth="sm" p={3} sx={{ mx: 'auto', marginBottom: 5 }} spacing={2}>
-                <Typography variant="h5" sx={{ color: '#19323C', marginBottom: 1, textAlign: 'center' }}>
-                    {project}
-                </Typography>
-                <Typography variant="subtitle2">
-                    On display are the projects I have completed either as a personal project or for a client. With each project you have the opportunity to check out the live website or directly browse the source code.
-                </Typography>
+            <Box id="projects" maxWidth="sm" p={3} sx={{ mx: 'auto', marginBottom: 5 }} spacing={2}>
+                <Box sx={{ padding: 5}}>
+                    <Typography variant="h4" sx={{ marginBottom: 1, textAlign: 'center' }}>
+                        {project}
+                    </Typography>
+                    <Typography variant="subtitle2">
+                        On display are the projects I have completed either as a personal project or for a client. With each project you have the opportunity to check out the live website or directly browse the source code.
+                    </Typography>
+                </Box>
             </Box>
 
             <Container sx={{ display: 'flex', justifyContent: 'center', marginBottom: 10 }}>
@@ -54,9 +56,9 @@ function Project({projects}) {
                                             </Typography>
                                         </CardContent>
                                         <CardActions>
-                                            <Link className="live-link" href={project.liveLink} sx={{ marginRight: 0.5}} >
+                                            <a className="live-link" href={project.liveLink} target="_blank">
                                                 <RiLiveFill style={{ color: '#F2545B' }} size={25}/>
-                                            </Link>
+                                            </a>
                                             <Link style={{ color: 'black' }} className="github-link" href={project.githubLink}>
                                                 <BsGithub size={25}/>
                                             </Link>
