@@ -9,6 +9,7 @@ import emailjs from '@emailjs/browser';
 import Snackbar from '@mui/material/Snackbar'
 import { useState } from 'react'
 import Grid from '@mui/material/Grid'
+import SendIcon from '@mui/icons-material/Send';
 
 function Contact() {
 
@@ -68,7 +69,7 @@ function Contact() {
 
     return (
 
-        <Container component="main" id="contact" style={{ marginTop: 200}}>
+        <Container component="main" id="contact">
             <Grid container spacing={10} sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
                 <Grid item xs={12} md={6}>
                     <Box sx={{
@@ -138,6 +139,7 @@ function Contact() {
                                 type="submit"
                                 fullWidth
                                 onClick={sendEmail}
+                                endIcon={<SendIcon />}
                             >
                                 Submit
                             </FormButton>

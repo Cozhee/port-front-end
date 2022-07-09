@@ -20,8 +20,8 @@ function About() {
     const about = 'A Little About Myself'
 
     return (
-        <Container id="about" maxWidth sx={{ display: 'flex', height: '60vh', justifyContent: 'center', alignItems: 'center', marginBottom: 10}}>
-            <Container sx={{ color: 'black', padding: 5 }}>
+        <Container id="about" maxWidth sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', marginBottom: 20}}>
+            <Container sx={{ color: 'black' }}>
                 <Typography variant="h4" sx={{ textAlign: 'center' }}>
                     {about}
                 </Typography>

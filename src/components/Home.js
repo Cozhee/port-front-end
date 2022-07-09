@@ -13,8 +13,8 @@ function Home({skills, projects}) {
     return (
         <>
 
-        <Grid container spacing={2} p={5} sx={{ justifyContent: 'center', alignItems: 'center', height: '100vh', paddingBottom: 10 }}>
-            <Grid item xs={12} md={10} lg={4}>
+        <Grid container spacing={2} p={2} sx={{ justifyContent: 'center', alignItems: 'center', height: '100vh', paddingBottom: 10 }}>
+            <Grid item xs={12} md={10} lg={4} sx={{  display: { xs: 'none', sm: 'block'} }}>
                 <Box
                     component="img"
                     src="/images/home-pic.png"
@@ -27,7 +27,7 @@ function Home({skills, projects}) {
                 <Box sx={{ display: 'flex', alignItems: 'center' }}>
                     <BsGithub size={35} style={{ color: '#24292e', marginRight: 10 }}/>
                     <BsLinkedin size={35} style={{ color: '#0b65c2', marginRight: 10 }}/>
-                    <Button href="#" style={{ backgroundColor: '#24292e', color: 'white' }}>
+                    <Button href="#" style={{ backgroundColor: '#4de09a', color: 'white' }}>
                         Contact me
                     </Button>
                 </Box>

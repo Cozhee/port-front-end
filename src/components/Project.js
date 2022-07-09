@@ -27,7 +27,7 @@ function Project({projects}) {
 
     return (
         <>
-            <Box id="projects" maxWidth="sm" p={3} sx={{ mx: 'auto', marginBottom: 5 }} spacing={2}>
+            <Box id="projects" maxWidth="sm" sx={{ mx: 'auto' }} spacing={2}>
                 <Box sx={{ padding: 5}}>
                     <Typography variant="h4" sx={{ marginBottom: 1, textAlign: 'center' }}>
                         {project}
@@ -38,7 +38,7 @@ function Project({projects}) {
                 </Box>
             </Box>
 
-            <Container sx={{ display: 'flex', justifyContent: 'center', marginBottom: 10 }}>
+            <Container sx={{ display: 'flex', justifyContent: 'center', marginBottom: 20 }}>
 
                 <Grid container spacing={3}>
                     {projects.map(project => {
