@@ -69,8 +69,8 @@ function Project({projects}) {
                                     </Box>
                                     <CardMedia
                                         component="img"
-                                        sx={{ width: 200 }}
                                         src={project.img}
+                                        sx={{ width: 300, objectFit: 'contain', display: { xs: 'none', sm: 'block' } }}
                                         alt="Live from space album cover"
                                     />
                                 </ProjectCard>

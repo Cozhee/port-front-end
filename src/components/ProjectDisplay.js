@@ -74,7 +74,7 @@ function ProjectDisplay({projects}) {
                             Problems and Process
                         </Typography>
                         <Typography variant="body1" mt={2}>
-                            {displayedProject[0].problem}
+                            {displayedProject[0].problems}
                         </Typography>
                     </Grid>
                 </Grid>
