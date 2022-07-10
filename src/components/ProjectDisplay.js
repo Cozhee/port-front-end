@@ -23,7 +23,7 @@ function ProjectDisplay({projects}) {
                 <Grid container sx={{ alignItems: 'center', backgroundColor: '#19323C' }} p={2}>
                     <Grid item xs={12} md={6}>
                         <Typography variant="h4" sx={{ color: '#F2545B'}}>
-                            Tech Perspective
+                            {displayedProject[0].title}
                         </Typography>
                         <Typography variant="overline" sx={{ color: '#F2545B'}}>
                             STACK
@@ -36,13 +36,13 @@ function ProjectDisplay({projects}) {
                             })}
                         </Stack>
                         <Typography variant="body2" mt={2} sx={{ color: 'white'}}>
-                            This is a React application that had bootstrap mixed in. This project was from a client that was unfinished and needed fixing up to make it live and available for students at Code Fellows. It required a lot of grunt work to clean up code and reduce an excessive amount of API calls to the server.
+                            {displayedProject[0].displayDescription}
                         </Typography>
                         <Typography variant="h5" sx={{ color: '#F2545B'}} mt={5}>
                             Project Purpose and Goal
                         </Typography>
                         <Typography variant="body1" mt={1} sx={{ color: 'white'}}>
-                            This project was created to track statistics about students entering the tech world and their inclusion and exposure to technology prior to engaging in formal education. After the collection of the results it was detrimental that an admin would be able to review the results in a graph format giving immediate feedback on specific questions.
+                            {displayedProject[0].purpose}
                         </Typography>
                     </Grid>
                     <Grid item xs={12} md={6} mt={5}>
@@ -74,7 +74,7 @@ function ProjectDisplay({projects}) {
                             Problems and Process
                         </Typography>
                         <Typography variant="body1" mt={2}>
-                            One of the first issues I encountered was a very slow runtime. On load the application would fetch results for all of the active surveys even if you were never to view that specific survey. I ended up rewriting the express backend server to only make API calls when they were absolutely necessary. The app was primarily built to only support one active survey so I had to rewrite the architecture to allow the use of multiple individual surveys.
+                            {displayedProject[0].problem}
                         </Typography>
                     </Grid>
                 </Grid>
@@ -84,15 +84,13 @@ function ProjectDisplay({projects}) {
                             Lessons Learned
                         </Typography>
                         <Typography variant="body1" mt={1}>
-                            I learned so much during this process but most of all I would say how to contribute on a single project as a team. Everything I have done up until this point was on my own. Learning how to commit to the same repo on github, merging the conflicts, and coming up with solutions to our problems were all such valuable moments. It was great to see how a few people could have multiple approaches to a problem. This really opened up my eyes on how developing an application is not a one track path and can be solved in so many different ways!
+                            {displayedProject[0].lessons}
                         </Typography>
                     </Grid>
                 </Grid>
                 <Grid container mt={5}>
                     <Grid xs={12} item sx={{ display: 'flex', justifyContent: 'center' }}>
-
                             <Button href="/">Back to Home</Button>
-
                     </Grid>
                 </Grid>
         </>
