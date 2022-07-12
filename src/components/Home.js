@@ -7,6 +7,7 @@ import Contact from '../components/Contact'
 import About from '../components/About'
 import {BsLinkedin, BsGithub} from 'react-icons/bs'
 import Button from '@mui/material/Button'
+import Link from '@mui/material/Link'
 
 function Home({skills, projects}) {
 
