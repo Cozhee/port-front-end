@@ -25,8 +25,8 @@ function Home({skills, projects}) {
                 >
                 </Box>
                 <Box sx={{ display: 'flex', alignItems: 'center' }}>
-                    <BsGithub size={35} style={{ color: '#24292e', marginRight: 10 }}/>
-                    <BsLinkedin size={35} style={{ color: '#0b65c2', marginRight: 10 }}/>
+                    <BsGithub href="https://github.com/Cozhee" target="_blank" size={35} style={{ color: '#24292e', marginRight: 10 }}/>
+                    <BsLinkedin href="https://www.linkedin.com/in/davis-r-cody/" target="_blank" size={35} style={{ color: '#0b65c2', marginRight: 10 }}/>
                     <Button href="#" style={{ backgroundColor: '#4de09a', color: 'white' }}>
                         Contact me
                     </Button>
