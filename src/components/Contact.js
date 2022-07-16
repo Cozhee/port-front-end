@@ -10,6 +10,7 @@ import Snackbar from '@mui/material/Snackbar'
 import { useState } from 'react'
 import Grid from '@mui/material/Grid'
 import SendIcon from '@mui/icons-material/Send';
+import {MdPermContactCalendar} from 'react-icons/md'
 
 function Contact() {
 
@@ -79,7 +80,10 @@ function Contact() {
                     }}
                     >
                         <Typography variant="h4" mb={1} mt={5}>
-                            {formTitle}
+                            <Box sx={{ display: 'flex', alignItems: 'center' }}>
+                                {formTitle}
+                                <MdPermContactCalendar style={{ marginLeft: 5 }}/>
+                            </Box>
                         </Typography>
                         <Typography variant="subtitle2">
                             I look forward to hearing from you. Fill out the form below and I will respond back to you immediately.

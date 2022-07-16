@@ -11,6 +11,7 @@ import Link from '@mui/material/Link'
 import {CardActions} from "@mui/material";
 import {styled} from "@mui/material/styles";
 import Button from '@mui/material/Button'
+import {GrWorkshop} from 'react-icons/gr'
 
 function Project({projects}) {
 
@@ -31,6 +32,7 @@ function Project({projects}) {
                 <Box sx={{ padding: 5}}>
                     <Typography variant="h4" sx={{ marginBottom: 1, textAlign: 'center' }}>
                         {project}
+                        <GrWorkshop size={25} style={{ marginLeft: 10 }} />
                     </Typography>
                     <Typography variant="subtitle2">
                         On display are the projects I have completed either as a personal project or for a client. With each project you have the opportunity to check out the live website or directly browse the source code.
@@ -44,7 +46,7 @@ function Project({projects}) {
                     {projects.map(project => {
 
                         return (
-                            <Grid key={project.title} item xs={12} md={6}>
+                            <Grid key={project.id} item xs={12} md={6}>
                                 <ProjectCard sx={{ display: 'flex', height: '100%', justifyContent: 'space-between' }}>
                                     <Box sx={{ display: 'flex', flexDirection: 'column' }}>
                                         <CardContent sx={{ flex: '1 0 auto'}}>

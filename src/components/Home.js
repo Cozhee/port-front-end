@@ -8,7 +8,9 @@ import About from '../components/About'
 import {BsLinkedin, BsGithub} from 'react-icons/bs'
 import Button from '@mui/material/Button'
 
-function Home({skills, projects}) {
+function Home({user, projects}) {
+
+    const skills = user.skills
 
     return (
         <>
@@ -34,16 +36,16 @@ function Home({skills, projects}) {
             </Grid>
             <Grid item xs={12} md={10} lg={6}>
                 <Typography variant="h3" sx={{ color: 'black' }}>
-                    My name is Cody!
+                    My name is {user.name}!
                 </Typography>
                 <Typography variant="h4" sx={{ color: 'black' }}>
-                    I am a <Box component="span" sx={{ color: '#F2545B'}}>software developer</Box> <br/> Passionate about coding and learning <br/>
+                    I am a <Box component="span" sx={{ color: '#F2545B'}}>{user.title}</Box> <br/> Passionate about coding and learning <br/>
                     <Skill skills={skills}/>
                 </Typography>
             </Grid>
         </Grid>
 
-        <About/>
+        <About user={user}/>
         <Project projects={projects}/>
         <Contact/>
         </>
